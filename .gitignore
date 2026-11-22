@@ -1,0 +1,29 @@
+# --- Secrets (never commit) ---
+.env
+.env.*
+!.env.example
+deploy/ngrok/ngrok.yml
+
+# --- Java / Maven build output ---
+target/
+*.class
+*.log
+hs_err_pid*
+
+# --- Frontend ---
+node_modules/
+frontend/dist/
+frontend/.vercel/
+
+# --- JMeter results (keep only the written summary) ---
+tests/load-jmeter/results/*
+!tests/load-jmeter/results/summary.md
+*.jtl
+jmeter.log
+
+# --- IDE / OS ---
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db

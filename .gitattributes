@@ -1,0 +1,15 @@
+# Normalize line endings so builds behave the same on Windows, macOS, Linux and in containers.
+* text=auto eol=lf
+
+# Windows scripts need CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Shell scripts run inside Linux containers must stay LF
+*.sh text eol=lf
+mvnw text eol=lf
+
+*.png binary
+*.jpg binary
+*.jar binary
